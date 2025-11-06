@@ -15,10 +15,12 @@ The contract ensures you can’t withdraw more than your balance.
 💻 Smart Contract
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
-
 contract TokenSavingsVault {
+    
     address owner;
+    
     uint balance;
+    
     mapping(address => uint) public balances;
 
     function deposit() public payable {
