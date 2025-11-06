@@ -12,10 +12,13 @@ Users can withdraw their ETH anytime.
 
 The contract ensures you can’t withdraw more than your balance.
 
-💻 Smart Contract
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
-contract TokenSavingsVault {
+Smart Contract
+
+    // SPDX-License-Identifier: MIT
+
+    pragma solidity ^0.8.0;
+        
+    contract TokenSavingsVault {
     
     address owner;
     
@@ -38,7 +41,7 @@ contract TokenSavingsVault {
         (bool success, ) = msg.sender.call{value: amount}("");
         require(success, "Withdrawal failed");
     }
-}
+    }
 
 How It Works
 
